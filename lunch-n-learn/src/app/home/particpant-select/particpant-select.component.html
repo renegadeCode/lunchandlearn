@@ -1,0 +1,8 @@
+<mat-form-field>
+	<mat-label>Add Participant</mat-label>
+	<mat-select>
+		<mat-option *ngFor="let participant of attendeesAllowed" (click)="addParticipant(participant)">
+			{{participant}}
+		</mat-option>
+	</mat-select>
+</mat-form-field>

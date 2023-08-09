@@ -1,0 +1,15 @@
+.lunch-n-learn {
+    display: grid;
+    grid-template-columns: 25vh 25vh;
+    column-gap: 2vh;
+    row-gap: 2vh;
+    margin-top: 8px;
+    margin-right: calc(-13px - 15px);
+    padding-top: 12px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    // width: calc(25vh * 3 + 2vh * 2 + 10px + 8px + 15px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 100%;
+}

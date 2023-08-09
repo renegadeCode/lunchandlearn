@@ -1,0 +1,17 @@
+<div class="participant">
+	<div style="display: flex;">
+		<h4 style="margin-left: 70px;">{{participant.type}}</h4>
+		<button mat-icon-button (click)="close()"><mat-icon>close</mat-icon></button>
+	</div>
+	<span>Status: {{getHungerState()}}</span>
+	<span *ngIf="!participant.order"><b>NO ORDER</b></span>
+	<span *ngIf="participant.order"><b>{{participant.order}}</b></span>
+	<mat-form-field>
+		<mat-label>Menu</mat-label>
+		<mat-select>
+			<mat-option *ngFor="let food of menu" (click)="order(food)">
+				{{food}}
+			</mat-option>
+		</mat-select>
+	</mat-form-field>
+</div>

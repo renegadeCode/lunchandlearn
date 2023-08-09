@@ -1,0 +1,8 @@
+<div class="virtual-room">
+	<div id="header">
+		<h3 style="text-align: center;">Virtual Room</h3>
+		<button mat-icon-button (click)="close()"><mat-icon>close</mat-icon></button>
+	</div>
+	<particpant-select (participantAdded)="addParticipant($event)"></particpant-select>
+	<participant-list [participants]="participants"></participant-list>
+</div>
