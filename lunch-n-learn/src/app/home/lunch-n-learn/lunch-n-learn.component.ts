@@ -17,5 +17,4 @@ export class LunchNLearnComponent {
 		lunchService.onLunchRoomsChanged.subscribe((lunchRooms: Set<LunchRoom>) => {this.lunchRooms = lunchRooms});
 		lunchService.onVirtualRoomsChanged.subscribe((virtualRooms: Set<VirtualRoom>) => {this.virtualRooms = virtualRooms})
 	}
-
 }

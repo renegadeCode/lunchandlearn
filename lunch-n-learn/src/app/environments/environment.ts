@@ -1,3 +1,5 @@
+import { AppConfig } from "../models/config/AppConfig.model";
+
 export const environment = {
-	attendees: ["Developer", "Mangager", "Intern", "CEO", "HOST"]
+	config: new AppConfig()
 }

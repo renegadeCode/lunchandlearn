@@ -14,7 +14,7 @@ export class ParticpantSelectComponent {
 	@Output() participantAdded = new EventEmitter<string>();
 
 	constructor() {
-		this.attendeesAllowed = new Set(environment.attendees);
+		this.attendeesAllowed = new Set(environment.config.attendeeList);
 	}
 
 	public addParticipant(particpant: string) {

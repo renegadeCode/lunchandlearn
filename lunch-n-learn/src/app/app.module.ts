@@ -16,6 +16,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { ParticpantSelectComponent } from './home/particpant-select/particpant-select.component';
 import { ParticipantListComponent } from './home/participant-list/participant-list.component';
 import { ParticipantComponent } from './home/participant-list/participant/participant.component'; 
+import { BrowserStorageService } from "./services/browser-storage.service";
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ParticipantComponent } from './home/participant-list/participant/partic
 	MatSelectModule
   ],
   providers: [
-	LunchService
+	LunchService,
+	BrowserStorageService
   ],
   bootstrap: [AppComponent]
 })

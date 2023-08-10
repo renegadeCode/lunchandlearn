@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Attendee } from "src/app/models/Attendee.model";
 import { LunchRoom } from "src/app/models/Room/LunchRoom.model";
+import { BrowserStorageService } from "src/app/services/browser-storage.service";
 import { LunchService } from "src/app/services/lunch.service";
 
 @Component({
@@ -10,15 +11,19 @@ import { LunchService } from "src/app/services/lunch.service";
 })
 export class LunchRoomComponent {
 	@Input() public room!: LunchRoom;
-	public participants = new Set<Attendee>();
 
-	constructor(private lunchService: LunchService) {}
+	constructor(private lunchService: LunchService, private browserStorage: BrowserStorageService) {}
 
 	public close() {
 		this.lunchService.removeLunchRoom(this.room);
 	}
 
+	public get participants() {
+		return this.room.attendees;
+	}
+
 	public addParticipant(particpant: string) {
-		this.participants.add(new Attendee(particpant));
+		this.room.attendees.add(new Attendee(particpant));
+		this.browserStorage.addRoom(this.room);
 	}
 }
