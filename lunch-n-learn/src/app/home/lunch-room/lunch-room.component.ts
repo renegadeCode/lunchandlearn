@@ -10,12 +10,15 @@ import { LunchService } from "src/app/services/lunch.service";
 })
 export class LunchRoomComponent {
 	@Input() public room!: LunchRoom;
-	public participants = new Set<Attendee>();
 
 	constructor(private lunchService: LunchService) {}
 
 	public close() {
 		this.lunchService.removeLunchRoom(this.room);
+	}
+
+	public get participants() {
+		return this.room.attendees;
 	}
 
 	public addParticipant(particpant: string) {
