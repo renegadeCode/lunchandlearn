@@ -7,15 +7,16 @@ import { HomeComponent } from "./home/home.component";
 import { LunchToolbarComponent } from './home/lunch-toolbar/lunch-toolbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
-import { LunchRoomComponent } from './home/lunch-room/lunch-room.component'; 
+import { LunchRoomComponent } from './home/room-components/lunch-room/lunch-room.component'; 
 import { LunchService } from "./services/lunch.service";
-import { VirtualRoomComponent } from './home/virtual-room/virtual-room.component';
+import { VirtualRoomComponent } from './home/room-components/virtual-room/virtual-room.component';
 import { LunchNLearnComponent } from './home/lunch-n-learn/lunch-n-learn.component';
 import {MatIconModule} from '@angular/material/icon'; 
 import {MatSelectModule} from '@angular/material/select';
 import { ParticpantSelectComponent } from './home/particpant-select/particpant-select.component';
 import { ParticipantListComponent } from './home/participant-list/participant-list.component';
 import { ParticipantComponent } from './home/participant-list/participant/participant.component'; 
+import { NgInitDirective } from "./directives/InitDirective.directive";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ParticipantComponent } from './home/participant-list/participant/partic
     LunchNLearnComponent,
     ParticpantSelectComponent,
     ParticipantListComponent,
-    ParticipantComponent
+    ParticipantComponent,
+	NgInitDirective
   ],
   imports: [
     BrowserModule,

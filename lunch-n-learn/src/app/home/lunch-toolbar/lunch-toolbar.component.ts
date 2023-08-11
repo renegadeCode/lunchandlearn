@@ -13,11 +13,11 @@ export class LunchToolbarComponent {
 	constructor(private lunchService: LunchService) {}
 
 	public addVirtualRoom() {
-		this.lunchService.addVirtualRoom(new VirtualRoom());
+		this.lunchService.addRoom(new VirtualRoom());
 	}
 
 	public addLunchRoom() {
-		this.lunchService.addLunchRoom(new LunchRoom());
+		this.lunchService.addRoom(new LunchRoom());
 	}
 
 	public serve() {

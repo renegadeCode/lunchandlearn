@@ -1,4 +1,5 @@
 <div class="lunch-n-learn">
-	<lunch-room *ngFor="let lunchRoom of lunchRooms" [room]="lunchRoom"></lunch-room>
-	<virtual-room *ngFor="let virtualRoom of virtualRooms" [room]="virtualRoom"></virtual-room>
+	<div *ngFor="let component of rooms" (init)="createRoomComponents()" elementInitialized>
+		<ng-template #rooms></ng-template>
+	</div>
 </div>
